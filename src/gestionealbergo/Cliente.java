@@ -5,7 +5,30 @@ public class Cliente {
 	private String cognome;
 	private String cellulare;
 	private String email;
-	
+
+
+	public Cliente(String nome, String cognome, String cellulare,String email) {
+		if(nome.length()==0)
+			throw new IllegalArgumentException ("Reinserisci il nome");
+		if(nome == null)
+			throw new IllegalArgumentException ("Il nome non può essere null");
+			this.nome = nome;
+		if(cognome.length()==0)
+			throw new IllegalArgumentException ("Reinserisci il cognome");
+		if(cognome == null)
+			throw new IllegalArgumentException ("il cognome non può essere null");
+			this.cognome = cognome;
+		if(cellulare.length()==0)
+			throw new IllegalArgumentException ("Inserisci il numero di telefono");
+		if(cellulare== null)
+			throw new IllegalArgumentException ("Il cellulare non può essere null");
+			this.cellulare = cellulare;
+		if(cognome.length()==0)
+			throw new IllegalArgumentException ("Reinserisci l'email");
+		if(email == null)
+			throw new IllegalArgumentException ("l'email non può essere null");
+			this.email = email;		
+	}
 	
 	
 	public Cliente(String nome, String cognome, String cellulare) {
@@ -18,7 +41,6 @@ public class Cliente {
 			throw new IllegalArgumentException ("Reinserisci il cognome");
 		if(cognome == null)
 			throw new IllegalArgumentException ("il cognome non può essere null");
-		
 			this.cognome = cognome;
 		if(cellulare.length()==0)
 			throw new IllegalArgumentException ("Inserisci il numero di telefono");
